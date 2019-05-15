@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NetCoreConsoleApp.Services.HelloWorld;
+using NetCoreConsoleApp.Services.GoodAfternoon;
+using NetCoreConsoleApp.Services.GoodMorning;
+using NetCoreConsoleApp.Services.Greeting;
 
 namespace NetCoreConsoleApp
 {
@@ -21,8 +23,10 @@ namespace NetCoreConsoleApp
         {
             ServiceCollection serivceCollection = new ServiceCollection();
 
-            serivceCollection.AddScoped<IHelloWorldService, HelloWorldService>();
-            serivceCollection.AddScoped<IAppRunner, AppRunnerRunner>();
+            serivceCollection.AddScoped<IGoodMorningService, GoodMorningService>();
+            serivceCollection.AddScoped<IGoodAfternoonService, GoodAfternoonService>();
+            serivceCollection.AddScoped<IGreetingService, GreetingService>();
+            serivceCollection.AddScoped<IAppRunner, AppRunner>();
             return serivceCollection;
         }
     }
