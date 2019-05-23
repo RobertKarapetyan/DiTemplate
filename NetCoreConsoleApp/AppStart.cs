@@ -21,13 +21,13 @@ namespace NetCoreConsoleApp
 
         private static ServiceCollection ServiceCollection()
         {
-            ServiceCollection serivceCollection = new ServiceCollection();
+            ServiceCollection result = new ServiceCollection();
 
-            serivceCollection.AddScoped<IGoodMorningService, GoodMorningService>();
-            serivceCollection.AddScoped<IGoodAfternoonService, GoodAfternoonService>();
-            serivceCollection.AddScoped<IGreetingService, GreetingService>();
-            serivceCollection.AddScoped<IAppRunner, AppRunner>();
-            return serivceCollection;
+            result.AddScoped<IGoodMorningService, GoodMorningService>();
+            result.AddScoped<IGoodAfternoonService, GoodAfternoonService>();
+            result.AddScoped<IGreetingService, GreetingService>();
+            result.AddScoped<IAppRunner, AppRunner>();
+            return result;
         }
     }
 }

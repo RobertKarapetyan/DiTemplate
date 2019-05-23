@@ -2,7 +2,7 @@
 {
     public class GoodAfternoonService : IGoodAfternoonService
     {
-        public string GoodbyeWorldMessage()
+        public string GoodAfternoonMessage()
         {
             return "Good Afternoon!";
         }

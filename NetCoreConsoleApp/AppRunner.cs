@@ -19,4 +19,9 @@ namespace NetCoreConsoleApp
             _greetingService.SayGoodAfternoon();
         }
     }
+
+    public interface IAppRunner
+    {
+        void Run();
+    }
 }
